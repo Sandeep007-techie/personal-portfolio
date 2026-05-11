@@ -451,6 +451,7 @@ h1, h2, h3, h4 { font-family: 'Space Grotesk', 'Inter', sans-serif; font-weight:
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
+    align-items: stretch;
 }
 .skill-group {
     padding: 2rem;
@@ -458,6 +459,8 @@ h1, h2, h3, h4 { font-family: 'Space Grotesk', 'Inter', sans-serif; font-weight:
     border: 1px solid var(--border);
     border-radius: var(--radius);
     transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 .skill-group:hover { border-color: var(--border-strong); transform: translateY(-4px); }
 .skill-group h4 {
@@ -467,18 +470,24 @@ h1, h2, h3, h4 { font-family: 'Space Grotesk', 'Inter', sans-serif; font-weight:
     -webkit-background-clip: text; background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.skill-group ul {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.35rem;
+}
 .skill-group ul li {
-    padding: 0.5rem 0;
+    padding: 0.45rem 0;
     color: var(--text-dim);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     border-bottom: 1px solid var(--border);
-    line-height: 1.5;
+    line-height: 1.45;
 }
 .skill-group ul li strong {
     color: var(--text);
     font-weight: 600;
-    display: inline-block;
-    min-width: 100px;
+    display: block;
+    margin-bottom: 0.1rem;
 }
 .skill-group ul li:last-child { border-bottom: none; }
 
